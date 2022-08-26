@@ -1,26 +1,16 @@
-import java.time.LocalDate;
-
 public class Main {
-    private static int choosingVersion() {
-        int phoneOS = 1;
-        int currentYear = LocalDate.now().getYear();
-        if (phoneOS == 0 && currentYear >= 2015) {
-            System.out.println("По ссылке вы можете установить версию для iOS");
-        } else {
-            if (phoneOS == 0 && currentYear <= 2015) {
-                System.out.println("Установите Lite версию для iOS по ссылке");
-            }
+    private static void countingDaysDelivery() {
+        int deliveryDistance = 95;
+        int deliveryDay = 1;
+        if (deliveryDistance > 20) {
+            deliveryDay++;
         }
-        if (phoneOS == 1 && currentYear >= 2015) {
-            System.out.println("По ссылке вы можете установить версию для Android");
-        } else {
-            if (phoneOS == 1 && currentYear <= 2015) {
-                System.out.println("Установите Lite версию для Android по ссылке");
-            }
+
+        if (deliveryDistance > 60) {
+            deliveryDay++;
         }
-        return phoneOS;
     }
     public static void main(String[] args) {
-        choosingVersion();
+        countingDaysDelivery();
     }
 }
